@@ -1,0 +1,56 @@
+<template>
+  <div>
+    <NuxtRouteAnnouncer />
+    <NuxtPage />
+  </div>
+</template>
+
+<style>
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+body {
+  @apply bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900;
+  @apply text-white min-h-screen font-sans;
+}
+
+.glass-effect {
+  @apply bg-white/10 backdrop-blur-lg border border-white/20;
+}
+
+.btn-primary {
+  @apply bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700;
+  @apply text-white font-semibold py-3 px-6 rounded-xl;
+  @apply transition-all duration-300 transform hover:scale-105;
+  @apply shadow-lg hover:shadow-primary-500/50;
+}
+
+.btn-secondary {
+  @apply bg-gradient-to-r from-secondary-500 to-secondary-600 hover:from-secondary-600 hover:to-secondary-700;
+  @apply text-white font-semibold py-3 px-6 rounded-xl;
+  @apply transition-all duration-300 transform hover:scale-105;
+  @apply shadow-lg hover:shadow-secondary-500/50;
+}
+
+.card {
+  @apply glass-effect rounded-2xl p-6 shadow-xl;
+  @apply transition-all duration-300 hover:shadow-2xl;
+}
+
+.input-field {
+  @apply w-full px-4 py-3 rounded-xl;
+  @apply bg-white/5 border-2 border-white/20;
+  @apply text-white placeholder-white/50;
+  @apply focus:outline-none focus:border-primary-500;
+  @apply transition-all duration-300;
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-400 to-secondary-400;
+}
+
+.animate-pulse-slow {
+  animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+</style>
